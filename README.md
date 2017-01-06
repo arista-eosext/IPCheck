@@ -10,7 +10,7 @@ IPCheck Utility
 
 The purpose of this utility is to test next hop reachability and alert if its down.
 Additionally, it can be used to monitor via ICMP any IP, such as hosts, and alert via syslog
-on your Arista switch when the host goes down or is comes back up.
+on your Arista switch when the host goes down or it comes back up.
 
 Add the following configuration snippets to change the default behavior. For the list
 of IPs to check, separate with a comma.
