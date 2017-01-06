@@ -18,8 +18,8 @@ of IPs to check, separate with a comma.
 daemon IPCheck
    exec /mnt/flash/IPCheck.py
    option CHECKINTERVAL value 2
-   option IPv4 value 10.1.1.1,10.1.1.2
-   option IPv6 value fc00:DEAD:BEEF::1
+   option IPv4 value 10.255.2.1,10.255.4.1
+   option IPv6 value fd00:dead:beef:2::1,fd00:dead:beef:4::1,fd00:dead:beef:4::3
    option PINGCOUNT value 2
    no shutdown
 ```
