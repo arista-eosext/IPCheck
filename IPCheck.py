@@ -21,11 +21,15 @@ daemon IPCheck
 
 This requires the EOS SDK extension installed if its < EOS 4.17.0 release. 
 All new EOS releases include the SDK.
+If using the RPM to install the installation, the default location to install the python SDK App is
+in /usr/local/bin, therefore the above exec parameter should be adjusted accordingly if using the RPM.
 '''
 #************************************************************************************
 # Change log
 # ----------
 # Version 1.0.0  - 11/14/2016 - Jeremy Georges -- jgeorges@arista.com --  Initial Version
+# Version 1.0.1  - 10/11/2016 - Jeremy Georges -- jgeorges@arista.com --  Clean up comments to better support SysdbMountProfiles
+#                                                                         and RPM package. No fundamental code changes.
 #
 #*************************************************************************************
 #
