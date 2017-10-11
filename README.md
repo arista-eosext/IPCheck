@@ -16,7 +16,7 @@ Add the following configuration snippets to change the default behavior. For the
 of IPs to check, separate with a comma.
 ```
 daemon IPCheck
-   exec /mnt/flash/IPCheck.py
+   exec /usr/local/bin/IPCheck.py
    option CHECKINTERVAL value 2
    option IPv4 value 10.255.2.1,10.255.4.1
    option IPv6 value fd00:dead:beef:2::1,fd00:dead:beef:4::1,fd00:dead:beef:4::3
@@ -64,8 +64,15 @@ Dec  1 15:15:15 Router-C IPCheck-ALERT-AGENT[3283]: Next HOP fd00:dead:beef:4::1
 
 
 # INSTALLATION:
-Copy to the /mnt/flash directory of each Arista switch that you want to use IPCheck.
+Because newer releases of EOS require a SysdbMountProfile, you'll need two files - IPCheck.py and IPCheck.
+IPCheck.py will need to go to an appropriate location such as /mnt/flash and IPCheck will need to be placed in
+/usr/lib/SysdbMountProfiles. The mount profile file name MUST match the python file name. In other words, if
+you place the mount profile IPCheck in /usr/lib/SysdbMountProfiles as IPCheck, then the executable filename IPCheck.py
+must be changed to IPCheck. The filename (agent name) and mount profile name must be the same.
 
+An RPM has been included that allows you to easily just install IPCheck as an extension and it takes care of all
+the file requirements. The RPM also installs the IPCheck SDK app in /usr/local/bin. This is the preferred distribution
+method for this application.
 
 
 License
